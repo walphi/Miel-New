@@ -1,0 +1,14 @@
+[build]
+command = "npm run build"
+publish = "out"  # Change to 'out' since we're using export
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[build.processing]
+skip_processing = false
+
+[build.processing.html]
+pretty_urls = true
